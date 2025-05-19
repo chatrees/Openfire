@@ -17,11 +17,11 @@
 
 <%@ page import="java.io.InputStream,
                  java.util.List,
-                 org.apache.commons.fileupload.FileItem,
-                 org.apache.commons.fileupload.FileItemFactory,
-                 org.apache.commons.fileupload.FileUploadException,
-                 org.apache.commons.fileupload.disk.DiskFileItemFactory,
-                 org.apache.commons.fileupload.servlet.ServletFileUpload"
+                 org.apache.commons.fileupload2.core.FileItem,
+                 org.apache.commons.fileupload2.core.FileItemFactory,
+                 org.apache.commons.fileupload2.core.FileUploadException,
+                 org.apache.commons.fileupload2.core.DiskFileItemFactory,
+                 org.apache.commons.fileupload2.jakarta.servlet6.JakartaServletFileUpload"
         %>
 <%@ page import="org.jivesoftware.admin.AuthCheckFilter" %>
 <%@ page import="org.jivesoftware.openfire.XMPPServer" %>
@@ -101,10 +101,10 @@
         boolean installed = false;
 
         // Create a factory for disk-based file items
-        FileItemFactory factory = new DiskFileItemFactory();
+        FileItemFactory factory = DiskFileItemFactory.builder().get();
 
         // Create a new file upload handler
-        ServletFileUpload upload = new ServletFileUpload(factory);
+        JakartaServletFileUpload upload = new JakartaServletFileUpload(factory);
         // I'm not sure that the file count can exceed 1, but limiting is good practice under CVE-2023-24998
         upload.setFileCountMax(20);
 
