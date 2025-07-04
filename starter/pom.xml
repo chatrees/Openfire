@@ -4,14 +4,14 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>org.igniterealtime.openfire</groupId>
-        <version>5.0.1</version>
+        <version>5.0.1-jakarta-04072025</version>
     </parent>
     <artifactId>starter</artifactId>
     <name>Starter for Openfire</name>
     <description>Starts Openfire and also launches the web admin interface in a web browser</description>
     <properties>
         <!-- Use static build timestamp for reproducible builds -->
-        <project.build.outputTimestamp>1980-02-01T00:00:00Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2025-07-04T16:49:00Z</project.build.outputTimestamp>
     </properties>
     <build>
         <plugins>

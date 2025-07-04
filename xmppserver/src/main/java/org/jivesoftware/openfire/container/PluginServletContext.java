@@ -16,8 +16,8 @@
 
 package org.jivesoftware.openfire.container;
 
-import javax.servlet.*;
-import javax.servlet.descriptor.JspConfigDescriptor;
+import jakarta.servlet.*;
+import jakarta.servlet.descriptor.JspConfigDescriptor;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -144,33 +144,9 @@ public class PluginServletContext implements ServletContext
     }
 
     @Override
-    public Servlet getServlet( String s ) throws ServletException
-    {
-        return proxy.getServlet( s );
-    }
-
-    @Override
-    public Enumeration<Servlet> getServlets()
-    {
-        return proxy.getServlets();
-    }
-
-    @Override
-    public Enumeration<String> getServletNames()
-    {
-        return proxy.getServletNames();
-    }
-
-    @Override
     public void log( String s )
     {
         proxy.log( s );
-    }
-
-    @Override
-    public void log( Exception e, String s )
-    {
-        proxy.log( e, s );
     }
 
     @Override

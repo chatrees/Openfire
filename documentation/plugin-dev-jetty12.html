@@ -38,9 +38,9 @@
         </p>
         <p>
             New in Jetty 12 is that the Servlet layer has been separated away from the Jetty Core layer. The Servlet layer
-            has been moved to the new Environments concept introduced with Jetty 12. Openfire 5.0.0 is using the Jakarta EE8
-            environment, which retains the <code>javax.servlet</code> packages known from earlier versions. The associated
-            Jetty GroupId is <code>org.eclipse.jetty.ee8</code>, which is commonly used as a (part of) a Jetty java package
+            has been moved to the new Environments concept introduced with Jetty 12. Openfire 5.0.0 is using the Jakarta EE9
+            environment, which retains the <code>jakarta.servlet</code> packages known from earlier versions. The associated
+            Jetty GroupId is <code>org.eclipse.jetty.ee9</code>, which is commonly used as a (part of) a Jetty java package
             name.
         </p>
     </section>
@@ -89,8 +89,8 @@
         &lt;plugins&gt;
             &lt;!-- Compiles the Openfire Admin Console JSP pages. --&gt;
             &lt;plugin&gt;
-                &lt;groupId&gt;org.eclipse.jetty.ee8&lt;/groupId&gt;
-                &lt;artifactId&gt;jetty-ee8-jspc-maven-plugin&lt;/artifactId&gt;
+                &lt;groupId&gt;org.eclipse.jetty.ee9&lt;/groupId&gt;
+                &lt;artifactId&gt;jetty-ee9-jspc-maven-plugin&lt;/artifactId&gt;
             &lt;/plugin&gt;
         &lt;/plugins&gt;
     &lt;/build&gt;
@@ -105,14 +105,14 @@
         <p>
             When a plugin uses a <code>org.eclipse.jetty.webapp.WebAppContext</code> that is registered with Openfire's
             embedded webserver that serves public content through <code>org.jivesoftware.openfire.http.HttpBindManager.addJettyHandler(org.eclipse.jetty.server.Handler)</code>
-            then migration to <code>org.eclipse.jetty.ee8.webapp.WebAppContext</code> may cause runtime class cast errors.
+            then migration to <code>org.eclipse.jetty.ee9.webapp.WebAppContext</code> may cause runtime class cast errors.
         </p>
         <p>
             Two solutions are available in Openfire 5.0.0:
         </p>
         <ol>
-            <li>In Openfire 5.0.0, an overloaded method <code>org.jivesoftware.openfire.http.HttpBindManager#addJettyHandler(org.eclipse.jetty.ee8.nested.ContextHandler)</code> was added. This can be used directly with your <code>org.eclipse.jetty.ee8.webapp.WebAppContext</code> instance.</li>
-            <li>The original method <code>org.jivesoftware.openfire.http.HttpBindManager#addJettyHandler(org.eclipse.jetty.server.Handler)</code> can be invoked with the 'core' context handler that can be obtained through <code>org.eclipse.jetty.ee8.nested.ContextHandler#get</code></li>
+            <li>In Openfire 5.0.0, an overloaded method <code>org.jivesoftware.openfire.http.HttpBindManager#addJettyHandler(org.eclipse.jetty.ee9.nested.ContextHandler)</code> was added. This can be used directly with your <code>org.eclipse.jetty.ee9.webapp.WebAppContext</code> instance.</li>
+            <li>The original method <code>org.jivesoftware.openfire.http.HttpBindManager#addJettyHandler(org.eclipse.jetty.server.Handler)</code> can be invoked with the 'core' context handler that can be obtained through <code>org.eclipse.jetty.ee9.nested.ContextHandler#get</code></li>
         </ol>
         <p>
             By virtue of the new overloaded method described in the first option, it's likely that your implementation needs little change to register the context handler.
@@ -193,7 +193,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.jetty.webapp.WebAppCont
     at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?]
     ... 8 more</code></pre>
             </fieldset>
-            <p>Consider using the EE8 WebAppContext from <code>org.eclipse.jetty.ee8.webapp.WebAppContext</code> to replace <code>org.eclipse.jetty.webapp.WebAppContext</code> usage.</p>
+            <p>Consider using the EE9 WebAppContext from <code>org.eclipse.jetty.ee9.webapp.WebAppContext</code> to replace <code>org.eclipse.jetty.webapp.WebAppContext</code> usage.</p>
         </section>
 
         <section id="constraint-security-handler">
@@ -218,7 +218,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.jetty.security.Constrai
     at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?]
     ... 11 more</code></pre>
             </fieldset>
-            <p>Consider using the EE8 ConstraintSecurityHandler from <code>org.eclipse.jetty.ee8.security.ConstraintSecurityHandler</code> to replace <code>org.eclipse.jetty.security.ConstraintSecurityHandler</code>.</p>
+            <p>Consider using the EE9 ConstraintSecurityHandler from <code>org.eclipse.jetty.ee9.security.ConstraintSecurityHandler</code> to replace <code>org.eclipse.jetty.security.ConstraintSecurityHandler</code>.</p>
         </section>
 
         <section id="jetty-websocket-creator">
@@ -240,7 +240,7 @@ Caused by: java.lang.ClassNotFoundException: org.eclipse.jetty.websocket.server.
     at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?]
     ... 8 more</code></pre>
             </fieldset>
-            <p>Consider using the EE8 JettyWebSocketServlet from <code>org.eclipse.jetty.ee8.websocket.server.JettyWebSocketServlet</code> to replace <code>org.eclipse.jetty.websocket.server.JettyWebSocketCreator</code>.</p>
+            <p>Consider using the EE9 JettyWebSocketServlet from <code>org.eclipse.jetty.ee9.websocket.server.JettyWebSocketServlet</code> to replace <code>org.eclipse.jetty.websocket.server.JettyWebSocketCreator</code>.</p>
         </section>
     </section>
 

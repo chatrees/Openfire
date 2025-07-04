@@ -18,9 +18,9 @@ package org.jivesoftware.admin.servlet;
 import org.jivesoftware.openfire.cluster.ClusterManager;
 import org.jivesoftware.util.*;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

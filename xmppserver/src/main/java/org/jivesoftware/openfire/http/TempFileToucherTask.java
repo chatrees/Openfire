@@ -16,7 +16,7 @@
 
 package org.jivesoftware.openfire.http;
 
-import org.eclipse.jetty.ee8.nested.ContextHandler;
+import org.eclipse.jetty.ee9.nested.ContextHandler;
 import org.eclipse.jetty.server.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

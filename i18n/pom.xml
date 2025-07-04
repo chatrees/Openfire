@@ -4,13 +4,13 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>org.igniterealtime.openfire</groupId>
-        <version>5.0.1</version>
+        <version>5.0.1-jakarta-04072025</version>
     </parent>
     <artifactId>i18n</artifactId>
     <name>Internationalization files for Openfire</name>
     <description>These files are shared among the starter and xmppserver modules</description>
     <properties>
         <!-- Use static build timestamp for reproducible builds -->
-        <project.build.outputTimestamp>1980-02-01T00:00:00Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2025-07-04T16:49:00Z</project.build.outputTimestamp>
     </properties>
 </project>
