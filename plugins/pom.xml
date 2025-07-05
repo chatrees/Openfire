@@ -122,7 +122,7 @@
         <plugin.name>${project.artifactId}</plugin.name>
 
         <!-- Versions -->
-        <openfire.version>5.0.1</openfire.version>
+        <openfire.version>5.0.1-jakarta-04072025</openfire.version>
         <!-- Note; the following jetty.version should be identical to the jetty.version in xmppserver/pom.xml -->
         <jetty.version>12.0.22</jetty.version>
     </properties>
