@@ -334,10 +334,17 @@
 
     <distributionManagement>
         <!-- Repository in which we deploy this project, when desired. -->
+        <!--
         <repository>
             <id>igniterealtime</id>
             <name>Ignite Realtime Repository</name>
             <url>https://igniterealtime.org/archiva/repository/maven/</url>
+        </repository>
+        -->
+        <repository>
+            <id>homeserver</id>
+            <name>Home Server Nexus Repository</name>
+            <url>http://192.168.1.176:8181/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
