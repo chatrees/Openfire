@@ -4,14 +4,14 @@
     <parent>
         <groupId>org.igniterealtime.openfire</groupId>
         <artifactId>parent</artifactId>
-        <version>5.0.3</version>
+        <version>5.0.3-jakarta-29012026</version>
     </parent>
     <artifactId>xmppserver</artifactId>
     <name>Core XMPP Server</name>
 
     <properties>
         <!-- Use static build timestamp for reproducible builds -->
-        <project.build.outputTimestamp>1980-02-01T00:00:00Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2026-01-28T17:20:57Z</project.build.outputTimestamp>
         <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
     </properties>
 
@@ -153,8 +153,8 @@
 
             <!-- Compile the JSP pages -->
             <plugin>
-                <groupId>org.eclipse.jetty.ee8</groupId>
-                <artifactId>jetty-ee8-jspc-maven-plugin</artifactId>
+                <groupId>org.eclipse.jetty.ee9</groupId>
+                <artifactId>jetty-ee9-jspc-maven-plugin</artifactId>
                 <version>${jetty.version}</version>
                 <executions>
                     <execution>
@@ -244,6 +244,23 @@
             <version>1.1.4c.0</version>
         </dependency>
 
+        <!-- Jakarta -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
         <!-- Jetty -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -251,13 +268,13 @@
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8</groupId>
-            <artifactId>jetty-ee8-servlet</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-servlet</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8</groupId>
-            <artifactId>jetty-ee8-webapp</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-webapp</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
@@ -266,23 +283,23 @@
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8</groupId>
-            <artifactId>jetty-ee8-plus</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-plus</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8</groupId>
-            <artifactId>jetty-ee8-annotations</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-annotations</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8.websocket</groupId>
-            <artifactId>jetty-ee8-websocket-jetty-server</artifactId>
+            <groupId>org.eclipse.jetty.ee9.websocket</groupId>
+            <artifactId>jetty-ee9-websocket-jetty-server</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee8</groupId>
-            <artifactId>jetty-ee8-apache-jsp</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-apache-jsp</artifactId>
             <version>${jetty.version}</version>
         </dependency>
         <dependency>
