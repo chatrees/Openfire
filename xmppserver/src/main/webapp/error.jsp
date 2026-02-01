@@ -24,7 +24,7 @@
                  org.jivesoftware.openfire.group.GroupNotFoundException"
     isErrorPage="true"
 %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 <fmt:setBundle basename="openfire_i18n"/>
 <%  boolean debug = Boolean.parseBoolean(JiveGlobals.getProperty("skin.default.debug"));
     if (debug) {

@@ -23,9 +23,9 @@
 <%@ page import="java.util.Map"%>
 <%@ page import="org.jivesoftware.util.*" %>
 <%@ page import="java.nio.file.Files" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.functions" prefix="fn" %>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 <%
     // Redirect if we've already run setup:
     if (!XMPPServer.getInstance().isSetupMode()) {
