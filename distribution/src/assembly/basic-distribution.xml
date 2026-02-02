@@ -31,9 +31,9 @@
             <source>${project.basedir}/../xmppserver/plugin.xml</source>
             <outputDirectory>plugins/admin</outputDirectory>
         </file>
-        <!-- Copy the admin console web.xml -->
+        <!-- Copy the admin console web.xml (using original since JSP pre-compilation is disabled) -->
         <file>
-            <source>${project.basedir}/../xmppserver/target/web.xml</source>
+            <source>${project.basedir}/../xmppserver/src/main/webapp/WEB-INF/web.xml</source>
             <outputDirectory>plugins/admin/webapp/WEB-INF</outputDirectory>
         </file>
     </files>
