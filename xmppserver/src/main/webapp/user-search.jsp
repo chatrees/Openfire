@@ -26,8 +26,8 @@
 %><%@ page import="org.xmpp.packet.JID"%>
 <%@ page import="java.nio.charset.StandardCharsets" %>
 
-<%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%-- Define Administration Bean --%>
 <jsp:useBean id="webManager" class="org.jivesoftware.util.WebManager"/>
 <%   webManager.init(request, response, session, application, out ); %>

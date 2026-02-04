@@ -15,7 +15,7 @@
   - limitations under the License.
 --%>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
 --%>
 
@@ -24,7 +24,7 @@
                  org.jivesoftware.openfire.user.*"
     
 %>
-<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%-- Define Administration Bean --%>
 <jsp:useBean id="ad" class="org.jivesoftware.util.WebManager"  />
 <% ad.init(request, response, session, application, out ); %>

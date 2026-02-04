@@ -28,7 +28,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.time.Duration" %>
 
-<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="admin" prefix="admin" %>
 
 <jsp:useBean id="webManager" class="org.jivesoftware.util.WebManager"  />

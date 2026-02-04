@@ -9,7 +9,7 @@
  <%@ page import="java.net.*" %>
  <%@ page import="java.nio.charset.StandardCharsets" %>
 
- <%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
  <%--
    - This page is meant to be included in other pages. It assumes 4 variables:
