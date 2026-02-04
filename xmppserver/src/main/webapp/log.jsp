@@ -30,7 +30,7 @@
 <%@ page import="java.nio.charset.StandardCharsets" %>
 <%@ page import="java.util.Arrays" %>
 
-<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="pageinfo" scope="request" class="org.jivesoftware.admin.AdminPageBean" />
 
 <%!
