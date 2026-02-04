@@ -26,8 +26,8 @@
 <%@ page import="org.jivesoftware.openfire.auth.AuthFactory" %>
 <%@ page import="org.jivesoftware.openfire.vcard.VCardManager" %>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 
 <%
     // Redirect if we've already run setup:

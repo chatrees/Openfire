@@ -21,8 +21,8 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.io.StringWriter" %>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 
 <%
     boolean success = false;
