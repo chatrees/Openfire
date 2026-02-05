@@ -124,11 +124,11 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
                 <configuration>
-                    <!-- Exclude JSP files, they will be compiled -->
-                    <warSourceExcludes>**/*.jsp,**/*.jspf,WEB-INF/lib/*.*</warSourceExcludes>
+                    <!-- Include JSP files for runtime compilation -->
+                    <warSourceExcludes>WEB-INF/lib/*.*</warSourceExcludes>
                     <warSourceDirectory>${warSourceDirectory}</warSourceDirectory>
-                    <!-- Use the web.xml, which contains the generated servlet declarations from the jetty-jspc-maven-plugin -->
-                    <webXml>${project.build.directory}/web.xml</webXml>
+                    <!-- Use the original web.xml (JSP pre-compilation is disabled) -->
+                    <webXml>${warSourceDirectory}/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
 
@@ -151,7 +151,7 @@
                 </executions>
             </plugin>
 
-            <!-- Compile the JSP pages -->
+            <!-- Compile the JSP pages (DISABLED - JSPs will be compiled at runtime) -->
             <plugin>
                 <groupId>org.eclipse.jetty.ee9</groupId>
                 <artifactId>jetty-ee9-jspc-maven-plugin</artifactId>
@@ -159,6 +159,7 @@
                 <executions>
                     <execution>
                         <id>jspc</id>
+                        <phase>none</phase>
                         <goals>
                             <goal>jspc</goal>
                         </goals>
